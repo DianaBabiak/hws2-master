@@ -11,6 +11,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    position: relative;
+    background-color: #F5F7FB;
 }
 
 code {
@@ -21,4 +23,10 @@ code {
 #root{
     display: flex;
     justify-content: center;
+}
+
+.wrapperPages{
+    margin-top: 60px;
+    max-width: 1280px;
+    padding: 0 70px;
 }
