@@ -19,6 +19,15 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
+            const serializedState = localStorage.getItem('hw6-editable-span-value');
+            if (serializedState === null) {
+              return  undefined;
+
+            }
+           const res = JSON.parse(serializedState);
+            setValue(res)
+
+
 
     }
 
