@@ -9,7 +9,17 @@
 }
 
 .label {
+    color: #000;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
 }
