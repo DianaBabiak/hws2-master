@@ -36,33 +36,33 @@
 
 .default:hover {
     background-color: #0080FF;
-    width: 168px;
+
 }
 
 .red:hover {
     background-color: #FF1A47;
-    width: 168px;
+
 }
 
 .secondary:hover {
     background-color: #E5F0FA;
-    width: 168px;
+
 }
 
 
 .default:active {
     background-color: #0059B2;
-    width: 130px;
+
 }
 
 .secondary:active {
     background-color: #C9E5FF;
-    width: 130px;
+
 }
 
 .red:active {
     background-color: #B21232;
-    width: 130px;
+
 }
 
 .button:disabled {

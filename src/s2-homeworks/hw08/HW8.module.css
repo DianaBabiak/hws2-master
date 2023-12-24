@@ -5,19 +5,52 @@
 }
 
 .users {
+
 }
 
 .buttonsContainer {
+    margin: 42px 0 18px;
+    display: flex;
+    gap:12px;
+    justify-content: flex-end;
 }
 
 .container {
 }
 
 .thead {
+    background-color: #E5E5E5;
+    font-weight: 600;
+    width: 606px;
+    height: 36px;
+    padding: 0 0 0 10px;
+
+
 }
 
 .nameCol {
+    color: #000;
+    font-family:'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+
+
 }
 
 .ageCol {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+
+
+}
+td{
+    width: 303px;
+    height: 36px;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 0 0 0 10px;
+
 }
