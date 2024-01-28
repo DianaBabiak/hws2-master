@@ -1,22 +1,49 @@
 .buttonsContainer {
+    display: flex;
+    gap:10px;
+    margin-top: 40px;
 }
 
 .responseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
 }
 
 .imageContainer {
+    margin-top: 40px;
+    width: 50%;
 }
 
 .image {
+    width: 348px;
+    height: 214px;
 }
 
 .textContainer{
 }
 
 .code {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
 }
 
 .text {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .info {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
