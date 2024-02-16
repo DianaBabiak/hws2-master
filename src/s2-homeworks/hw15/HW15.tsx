@@ -32,14 +32,18 @@ const getTechs = (params: ParamsType) => {
         .get<{ techs: TechType[], totalCount: number }>(
             'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
+
         )
+        .then((res)=>{
+            return res.data
+        })
         .catch((e) => {
             alert(e.response?.data?.errorText || e.message)
         })
 }
 
 const HW15 = () => {
-    const [sort, setSort] = useState('')
+    const [sort, setSort] = useState('1tec')
     const [page, setPage] = useState(1)
     const [count, setCount] = useState(4)
     const [idLoading, setLoading] = useState(false)
@@ -50,8 +54,10 @@ const HW15 = () => {
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
-            .then((res) => {
-                // делает студент
+            .then((data) => {
+                setTechs(data?.techs as TechType[])
+                setTotalCount(data?.totalCount as number)
+                setLoading(false)
 
                 // сохранить пришедшие данные
 
@@ -61,12 +67,11 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
+        console.log('onChangePagination', newCount)
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({sort,page:newPage,count:newCount})
+        setSearchParams(searchParams)
 
         //
     }
@@ -74,11 +79,12 @@ const HW15 = () => {
     const onChangeSort = (newSort: string) => {
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort);
+        setPage(1); // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({sort: newSort, page, count}); // Обновляем sort на newSort
+
+        setSearchParams(searchParams);
 
         //
     }
